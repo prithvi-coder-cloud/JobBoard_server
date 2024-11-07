@@ -38,7 +38,7 @@ mongoose.connect(process.env.DATABASE, {
   .catch(err => console.error("MongoDB connection error:", err));
 
 app.use(cors({
-  origin: "http://localhost:3000", // Allow requests from this origin
+  origin: ["http://localhost:3000","https://jobboardweb.netlify.app"],
   methods: "GET,POST,PUT,DELETE",
   credentials: true
 }));
